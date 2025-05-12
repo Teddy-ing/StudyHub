@@ -1,0 +1,168 @@
+body {
+    min-height: 100vh;
+    max-height: 100vh;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    margin: 0em;
+}
+
+a{
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+}
+
+.nav{
+    display: flex;
+    min-height: 4em;
+    min-width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    align-self: center;
+    justify-self: center;
+    gap: 5em;
+    border-bottom: 0.15em solid black;
+}
+
+#nav-sandwich{
+    width: 3em;
+    height: 3em;
+}
+
+#settings-btn{
+    width: 2em;
+    height: 2em;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: black;
+    border-radius: 1em;
+}
+
+#content-box{
+    min-height: 80vh;
+    margin-top: 3em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+#timer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.timeDisplay{
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+    font-size: 9em;
+    display: flex;
+    align-items: center;
+}
+
+#control-btns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 3em;
+    padding-bottom: 1em;
+}
+
+input.startStop{
+    height: 7em;
+    width: 7em;
+}
+
+#reset{
+    height: 5em;
+    width: 5em;
+}
+
+#session-type-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    padding-bottom: 1em;
+}
+
+#session-type-btn input{
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    width: 12em;
+    height: 4em;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.25em;
+    border-radius: 2em;
+    background: none;
+    cursor: pointer;
+}
+
+#edit-btn{
+    height: 2.5em;
+    width: 2.5em;
+    padding-top: 7em;
+}
+
+#edit-time{
+    background-color: white;
+    border-style: dashed;
+    border-radius: 2em;
+    visibility: hidden;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 25px;
+    width: fit-content;
+    height: fit-content;
+    max-width: 100vw;
+    max-height: 100dvh;
+    margin: auto auto auto auto;
+    flex-direction: column;
+}
+
+#close-window-btn{
+    height: 5em;
+    width: 5em;
+    align-self: flex-end;
+    padding-top: 0.5em;
+    padding-right: 1em;
+}
+
+#edit-form{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    margin-bottom: 4em;
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
+#edit-form input{
+    font-size: 18px;
+    font-family: "Lexend", sans-serif;
+    min-height: 2em;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 0.1em;
+    border-radius: 0.5em;
+    padding: 0em 0em 0em 1em
+}
+
+#edit-form label{
+    font-family: "Lexend", sans-serif;
+}
+
+#submit-btn{
+    cursor: pointer;
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="/public/styles/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="nav" id="nav-bar">
+        <input type="image" class="nav-icons" id="nav-sandwich" src="/public/styles/resources/icons/list.svg"/>
+        <a>Dashboard</a>
+        <a href="timer.html">Timer</a>
+        <a href="calendar.html">Calendar</a>
+        <a>Notes</a>
+        <a>To-dos</a>
+        <input type="image" class="nav-icons" id="settings-btn" src="/public/styles/resources/icons/gear-fill.svg" />
+    </div>
+    <div class="container" id="content-box">
+        <div id="timer">
+            <input type="image" id="edit-btn" src="/public/styles/resources/icons/pencil-square.svg" />
+            <div class="timeDisplay" id="focus-time">25:00</div>
+            <div class="btn" id="control-btns">
+                <input class="startStop" type="image" id="start" src="/public/styles/resources/icons/play-fill.svg"/>
+                <input type="image" id="reset" src="/public/styles/resources/icons/arrow-counterclockwise.svg" />
+            </div>
+            <div class="btn" id="session-type-btn">
+                <input type="button" id="focus" value="Focus" />
+                <input type="button" id="short-break" value="Short Break" />
+                <input type="button" id="long-break" value="Long Break" />
+            </div>
+        </div>
+        <div class="container" id="edit-time">
+            <input type="image" id="close-window-btn" src="/public/styles/resources/icons/x.svg" />
+            <form id="edit-form">
+                <div class="edit-input">
+                    <label for="focus-time">Focus</label><br>
+                    <input form="edit-form" type="number" id="focus-time" value="25" min="1"/>
+                </div>
+                <div class="edit-input">
+                    <label for="short-break-time">Short Break</label><br>
+                    <input form="edit-form" type="number" id="short-break-time" value="5" min="1"/>
+                </div>
+                <div class="edit-input">
+                    <label for="long-break-time">Long Break</label><br>
+                    <input form="edit-form" type="number" id="long-break-time" value="15" min="1"/>
+                </div>
+                <input type="submit" id="submit-btn"/>
+            </form>
+        </div>
+    </div>
+    <script src="/public/scripts/timer.js"></script>
+</body>
+</html>
