@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="/public/styles/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    </style>
+</head>
+<body>
+    <div id="create-account-form">
+        <input type="image" id="back" src="/public/styles/resources/icons/arrow-left.svg" onclick="window.location.href='login.html';"/>
+        <h1>Create Account</h1>
+        <form id="create-account">
+            <input type="text" placeholder="name" name="userName" />
+            <input type="email" placeholder="email" name="userEmail"/>
+            <input type="text" placeholder="password" name="password"/>
+            <input type="submit"/>
+        </form>
+    </div>
+    <script src="/public/scripts/createAccount.js"></script>
+</body>
+</html>

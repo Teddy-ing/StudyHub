@@ -15,23 +15,68 @@
         <a>Dashboard</a>
         <a href="timer.html">Timer</a>
         <a href="calendar.html">Calendar</a>
-        <a>Notes</a>
-        <a>To-dos</a>
+        <a href="notes.html">Notes</a>
+        <a href="todos.html">To-dos</a>
         <input type="image" class="nav-icons" id="settings-btn" src="/public/styles/resources/icons/gear-fill.svg" />
     </div>
-    <div class="container" id="content-box">
-        <div class="container" id="mini-cal">
+    <div id="calendar-space">
+        <div id="filters">
+            <div class="container" id="mini-cal">
 
-        </div>
-        <div class="container" id="calendar-filter">
+            </div>
+            <div class="container" id="calendar-filter">
 
+            </div>
         </div>
         <div class="container" id="schedule">
 
         </div>
-        <div class="container" id="edit-event">
+    </div>
+    <div class="container" id="content-box">
+        <div class="container" id="schedule-day" >
 
         </div>
+        <div class="container" id="edit-details">
+            <div id="event-details">
+                <h1>Event #1</h1>
+                <p>Calendar Category</p>
+                <p>Date(s)</p>
+                <p>Time</p>
+                <p>Details</p>
+            </div>
+            <div id="new-event">
+                <h1>New Event</h1>
+                <form method="post" id="event-form" name="newEvent">
+                    <input type="text" name="eventName" />
+                    <div id="date-inputs">
+                        <input type="date" name="startDate" />
+                        <p>-</p>
+                        <input type="date" name="endDate" />
+                    </div>
+                    <div id="time-inputs">
+                        <input type="time" name="startTime" />
+                        <p>-</p>
+                        <input type="time" name="endTime" />
+                    </div>
+                    <input type="text" name="eventDescription" />
+                    <input type="text" name="calendarCategory"/>
+                    <input type="submit" id="submit-btn" />
+                </form>
+            </div>
+            <div id="edit-event">
+                <h1>Edit Event</h1>
+                <form method="post" id="event-form" name="editEvent">
+                    <input type="text" name="eventName" />
+                    <input type="date" name="startDate" /> <input type="date" name="endDate" />
+                    <input type="time" name="startTime" />
+                    <input type="time" name="endTime" />
+                    <input type="text" name="eventDescription" />
+                    <input type="text" name="calendarCategory"/>
+                    <input type="submit" id="submit-btn" />
+                </form>
+            </div>
+        </div>
     </div>
+    <script src="/public/scripts/calendar.js"></script>
 </body>
 </html>

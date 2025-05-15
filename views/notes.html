@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes</title>
+    <link rel="stylesheet" href="/public/styles/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+    </style>
 </head>
 <body>
-    
+    <div class="nav" id="nav-bar">
+        <input type="image" class="nav-icons" id="nav-sandwich" src="/public/styles/resources/icons/list.svg"/>
+        <a>Dashboard</a>
+        <a href="timer.html">Timer</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="notes.html">Notes</a>
+        <a href="todos.html">To-dos</a>
+        <input type="image" class="nav-icons" id="settings-btn" src="/public/styles/resources/icons/gear-fill.svg" />
+    </div>
+    <div class="notes" id="app">
+        <div class="notes-sidebar">
+            <button class="notes-add" type="button">Add Note</button>
+            <div class="notes-list">
+                <div class="notes-list-item notes-list-item-selected">
+                    <div class="notes-small-title">Lecture Notes</div>
+                    <div class="notes-small-body">I learnt nothing today.</div>
+                    <div class="notes-small-updated">Thursday 3:30pm</div>
+                </div>
+            </div>
+        </div>
+        <div class="notes-preview">
+            <input class="notes-title" type="text" placeholder="Enter a title...">
+            <textarea class="notes-body">I am the notes body...</textarea>
+        </div>
+    </div>
 </body>
 </html>

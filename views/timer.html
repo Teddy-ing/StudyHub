@@ -15,8 +15,8 @@
         <a>Dashboard</a>
         <a href="timer.html">Timer</a>
         <a href="calendar.html">Calendar</a>
-        <a>Notes</a>
-        <a>To-dos</a>
+        <a href="notes.html">Notes</a>
+        <a href="todos.html">To-dos</a>
         <input type="image" class="nav-icons" id="settings-btn" src="/public/styles/resources/icons/gear-fill.svg" />
     </div>
     <div class="container" id="content-box">
@@ -38,15 +38,15 @@
             <form id="edit-form">
                 <div class="edit-input">
                     <label for="focus-time">Focus</label><br>
-                    <input form="edit-form" type="number" id="focus-time" value="25" min="1"/>
+                    <input form="edit-form" type="number" id="focus-time" placeholder="25" min="1"/>
                 </div>
                 <div class="edit-input">
                     <label for="short-break-time">Short Break</label><br>
-                    <input form="edit-form" type="number" id="short-break-time" value="5" min="1"/>
+                    <input form="edit-form" type="number" id="short-break-time" placeholder="5" min="1"/>
                 </div>
                 <div class="edit-input">
                     <label for="long-break-time">Long Break</label><br>
-                    <input form="edit-form" type="number" id="long-break-time" value="15" min="1"/>
+                    <input form="edit-form" type="number" id="long-break-time" placeholder="15" min="1"/>
                 </div>
                 <input type="submit" id="submit-btn"/>
             </form>
