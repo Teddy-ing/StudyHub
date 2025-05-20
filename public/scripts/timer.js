@@ -1,5 +1,5 @@
 //text
-let timerDisplay = document.getElementById('focus-time');
+let timerDisplay = document.getElementById('timer-display');
 //buttons
 let startStopBtn = document.getElementById('start');
 let resetBtn = document.getElementById('reset')

@@ -1,3 +1,10 @@
+:root{
+    --main-font: "Lexend", sans-serif;
+}
+*{
+    font-family: var(--main-font);
+}
+
 body {
     min-height: 100vh;
     max-height: 100vh;
@@ -5,11 +12,9 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0em;
-    font-family: "Lexend", sans-serif;
 }
 
 a{
-    font-family: "Lexend", sans-serif;
     font-weight: 400;
 }
 
@@ -51,22 +56,33 @@ a{
     margin-right: 10em;
 }
 
+.add-btn{
+    background: white;
+    border: solid;
+    border-radius: 7px;
+    color: black;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    padding: 0.75em 0;
+    width: 100%;
+}
+
 /*Timer Style*/
 
 #timer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-self: center;
     justify-content: center;
     padding-top: 2em;
 }
 
-.timeDisplay{
-    font-family: "Lexend", sans-serif;
+#timer-display{
     font-weight: 400;
     font-size: 9em;
-    display: flex;
-    align-items: center;
 }
 
 #control-btns{
@@ -90,12 +106,11 @@ input.startStop{
 #session-type-btn{
     display: flex;
     flex-direction: row;
-    gap: 3em;
+    gap: 1em;
     padding-bottom: 1em;
 }
 
 #session-type-btn input{
-    font-family: "Lexend", sans-serif;
     font-weight: 500;
     font-size: 14px;
     width: 12em;
@@ -151,7 +166,6 @@ input.startStop{
 
 form input{
     font-size: 18px;
-    font-family: "Lexend", sans-serif;
     min-height: 2em;
     background-color: white;
     border-style: solid;
@@ -159,10 +173,6 @@ form input{
     border-width: 0.1em;
     border-radius: 0.5em;
     padding: 0em 0em 0em 1em
-}
-
-#edit-form label{
-    font-family: "Lexend", sans-serif;
 }
 
 #submit-btn{
@@ -173,6 +183,300 @@ form{
     display: flex;
     flex-direction: column;
 }
+
+
+
+/*Notes*/
+
+.sidebar{
+    border-right: 0.15em solid black;
+    flex-shrink: 0;
+    overflow-y: auto;
+    padding: 1em;
+    height: 80vh;
+    width: 25vw;
+}
+
+.notes-preview, .main-content{
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    margin-right: auto;
+    padding-left: 1em;
+}
+
+.notes-list-item {
+    cursor: pointer;
+}
+
+.list-item:hover, .list-item.active, .notes-list-item-selected {
+    background: #eeeeee;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.notes-small-title,
+.notes-small-updated {
+    padding: 10px;
+}
+
+.notes-small-title {
+    font-size: 1.2em;
+}
+
+.notes-small-body {
+    padding: 0 10px;
+}
+
+.notes-small-updated {
+    color: #aaaaaa;
+    font-style: italic;
+    text-align: right;
+}
+
+.notes-preview {
+    display: flex;
+    flex-direction: column;
+    padding: 0em 3em;
+    flex-grow: 1;
+}
+
+.notes-title,
+.notes-body {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.notes-title, .list-header h1{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.list-header input {
+    font-size: 1em;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    outline: none;
+    /*padding: 5px;
+    margin-bottom: 10px;*/
+}
+
+.notes-body {
+    flex-grow: 1;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-top: 2em;
+    resize: none;
+}
+
+
+/*ToDo List*/
+
+.lists {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/*.list-title {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}*/
+
+.delete-list {
+    color: #000000;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.delete-list:hover {
+    opacity: 1;
+}
+
+/* Progress bar styles */
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #343434;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.add-task {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.add-task input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.add-task button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-task button:hover {
+    background-color: #2980b9;
+}
+
+.tasks {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.task-checkbox.checked {
+    background-color: #000000;
+}
+
+.task-text {
+    flex-grow: 1;
+}
+
+.task-text.completed {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+.delete-task {
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Confirmation dialog styles */
+.confirmation-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.dialog-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+}
+
+.dialog-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.dialog-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cancel-btn {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.confirm-btn {
+    background-color: #000000;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        max-height: 200px;
+    }
+}
+
+
+
+
 
 /*Main Calendar View*/
 
@@ -265,92 +569,3 @@ h1{
     width: 2em;
     height: 2em;
 }
-
-/*Notes*/
-.notes-sidebar{
-    border-right: 0.2em solid black;
-    flex-shrink: 0;
-    overflow-y: auto;
-    padding: 1em;
-    height: 80vh;
-    width: 25vw;
-    
-}
-
-.notes-preview{
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    margin-right: auto;
-}
-
-.notes-add{
-    background: white;
-    border: solid;
-    border-radius: 7px;
-    color: black;
-    cursor: pointer;
-    font-size: 1.25em;
-    font-weight: bold;
-    margin-bottom: 1em;
-    padding: 0.75em 0;
-    width: 100%;
-}
-
-.notes-list-item {
-    cursor: pointer;
-}
-
-.notes-list-item-selected {
-    background: #eeeeee;
-    border-radius: 7px;
-    font-weight: bold;
-}
-
-.notes-small-title,
-.notes-small-updated {
-    padding: 10px;
-}
-
-.notes-small-title {
-    font-size: 1.2em;
-}
-
-.notes-small-body {
-    padding: 0 10px;
-}
-
-.notes-small-updated {
-    color: #aaaaaa;
-    font-style: italic;
-    text-align: right;
-}
-
-.notes-preview {
-    display: flex;
-    flex-direction: column;
-    padding: 2em 3em;
-    flex-grow: 1;
-}
-
-.notes-title,
-.notes-body {
-    border: none;
-    outline: none;
-    width: 100%;
-}
-
-.notes-title {
-    font-size: 3em;
-    font-weight: bold;
-}
-
-.notes-body {
-    flex-grow: 1;
-    font-size: 1.2em;
-    line-height: 1.5;
-    margin-top: 2em;
-    resize: none;
-}
-
-
