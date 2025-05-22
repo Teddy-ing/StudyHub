@@ -1,5 +1,9 @@
 import NotesView from "./NotesView.js";
 import NotesAPI from "./NotesAPI.js";
+import { api } from "/scripts/api.js";
+
+const data = await api("/profile");
+console.log(data);
 
 export default class App {
     constructor(root) {

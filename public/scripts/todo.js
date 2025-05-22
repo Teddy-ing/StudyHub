@@ -1,3 +1,8 @@
+import { api } from "/scripts/api.js";
+
+const data = await api("/profile");
+console.log(data);
+
 // Data structure to store lists and tasks
 let lists = [];
 let currentListId = null;

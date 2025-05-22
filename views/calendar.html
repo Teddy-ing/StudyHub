@@ -17,6 +17,7 @@
         <a href="calendar.html">Calendar</a>
         <a href="notes.html">Notes</a>
         <a href="todos.html">To-dos</a>
+        <button id="authBtn">Log in</button>
         <input type="image" class="nav-icons" id="settings-btn" src="/public/styles/resources/icons/gear-fill.svg" />
     </div>
     <div id="calendar-space">
@@ -78,5 +79,14 @@
         </div>
     </div>
     <script src="/public/scripts/calendar.js"></script>
+    <script type="module" src="/scripts/auth-init.js" defer></script>
+    <script type="module">
+        import { login, handleRedirect } from "/js/auth.js";
+    
+        // 👇 This runs on *every* page load
+        handleRedirect().catch(console.error);
+    
+        document.getElementById("loginBtn").onclick = login;
+      </script>
 </body>
 </html>
